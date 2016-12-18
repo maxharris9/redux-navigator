@@ -1,14 +1,14 @@
 {
   "name": "redux-navigator",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "router for redux-based applications",
-  "main": "build/redux-navigator.js",
+  "main": "redux-navigator.js",
   "scripts": {
     "test": "tape test.js",
     "cover": "istanbul cover test.js",
-    "watch": "watchify -v -e router.js -t [ babelify --presets [ es2015 ] ] --debug -o build/redux-navigator.js",
-    "build": "NODE_ENV=production browserify -v -e router.js -t [ babelify --presets [ es2015 ] ] -o build/redux-navigator.js",
-    "clean": "rm build/redux-navigator.js"
+    "watch": "watchify -v -e lib/router.js -t [ babelify --presets [ es2015 ] ] --debug -o redux-navigator.js",
+    "build": "NODE_ENV=production browserify -v -e lib/router.js -t [ babelify --presets [ es2015 ] ] -o redux-navigator.js",
+    "clean": "rm redux-navigator.js"
   },
   "author": "Max Harris <harris.max@gmail.com> (http://nodesource.com/)",
   "license": "MIT",

@@ -1,4 +1,4 @@
-const router = require('./router')
+const router = require('./lib/router')
 const tape = require('tape')
 
 const Router = require('routes')

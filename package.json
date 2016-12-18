@@ -6,13 +6,14 @@
   "scripts": {
     "test": "tape test.js",
     "cover": "istanbul cover test.js",
-    "watch": "babel lib/router.js --watch --out-file redux-navigator.js",
-    "build": "babel lib/router.js --out-file redux-navigator.js",
+    "watch": "babel lib/router.js --watch --presets=es2015 --out-file redux-navigator.js",
+    "build": "babel lib/router.js --presets=es2015 --out-file redux-navigator.js",
     "clean": "rm redux-navigator.js"
   },
   "author": "Max Harris <harris.max@gmail.com> (http://nodesource.com/)",
   "license": "MIT",
   "devDependencies": {
-    "babel-cli": "^6.18.0"
+    "babel-cli": "^6.18.0",
+    "babel-preset-es2015": "^6.18.0"
   }
 }

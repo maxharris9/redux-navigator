@@ -6,20 +6,13 @@
   "scripts": {
     "test": "tape test.js",
     "cover": "istanbul cover test.js",
-    "watch": "watchify -v -e lib/router.js -t [ babelify --presets [ es2015 ] ] --debug -o redux-navigator.js",
-    "build": "NODE_ENV=production browserify -v -e lib/router.js -t [ babelify --presets [ es2015 ] ] -o redux-navigator.js",
+    "watch": "babel lib/router.js --watch --out-file redux-navigator.js",
+    "build": "babel lib/router.js --out-file redux-navigator.js",
     "clean": "rm redux-navigator.js"
   },
   "author": "Max Harris <harris.max@gmail.com> (http://nodesource.com/)",
   "license": "MIT",
   "devDependencies": {
-    "babel-preset-es2015": "^6.18.0",
-    "babelify": "^7.3.0",
-    "browserify": "^13.1.1",
-    "istanbul": "^0.4.5",
-    "qs": "^6.3.0",
-    "routes": "^2.1.0",
-    "tape": "^4.6.3",
-    "watchify": "^3.8.0"
+    "babel-cli": "^6.18.0"
   }
 }
